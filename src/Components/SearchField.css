@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0; 
+}
+
+.Search-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: aqua;
+}
