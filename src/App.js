@@ -17,7 +17,7 @@ export class App extends Component {
 
   componentDidMount(){
     axios
-    .get('https://api.giphy.com/v1/gifs/trending?api_key=9nyA05jjiNMrTb4CsnPDkfKArV9U5Gap&limit=10&rating=G')
+    .get('https://api.giphy.com/v1/gifs/trending?api_key=9nyA05jjiNMrTb4CsnPDkfKArV9U5Gap&limit=30&rating=G')
     .then((response) => {
         const data = response.data; 
         const newGifs = [];
@@ -40,7 +40,7 @@ export class App extends Component {
     const passItems = []; 
     for(let i = 0; i < this.state.gifUrl.length; i++){
         items.push(
-            <div>
+            <div className="gif-cards">
                 <img src={this.state.gifUrl[i]} alt="gif"/>
             </div>);
         passItems.push(this.state.gifUrl[i]
