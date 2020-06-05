@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios';
+import './GifCard.css';
 
 export class GifCard extends Component {
     constructor(props){
@@ -34,10 +35,20 @@ export class GifCard extends Component {
 
     render() {
 
+        const items = [];
+        const passItems = []; 
+        for(let i = 0; i < this.state.gifUrl.length; i++){
+            items.push(
+                <div className="gif-cards">
+                    <img src={this.state.gifUrl[i]} alt="gif"/>
+                </div>);
+            passItems.push(this.state.gifUrl[i]
+            )
+        }
+
         return (
-            <div>
-                <h2>{this.state.gifUrl}</h2>
-                {console.log(this.props.term)}
+            <div className="Search-cards">
+                {items}
             </div>
         )
     }

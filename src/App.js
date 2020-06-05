@@ -46,7 +46,6 @@ export class App extends Component {
         passItems.push(this.state.gifUrl[i]
         )
     }
-    let trending = (this.state.trending) ? <h3>Trending Giphy Gifs</h3>: <h1>Giphy Gifs</h1>;
 
     return (
       <div>
